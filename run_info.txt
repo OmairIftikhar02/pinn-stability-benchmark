@@ -1,0 +1,53 @@
+Mode: full
+Date: 2026-10-03 18:29:58
+Python: 3.13.15
+PyTorch: 2.11.0+cu130
+NumPy: 2.1.3
+SciPy: 1.16.3
+OS: Linux-6.6.122+-x86_64-with-glibc2.39
+CPU: x86_64, 2 logical cores
+Device used for training: cuda
+GPU: Tesla T4
+RAM: 12.7 GB
+
+Settings:
+{
+  "seeds": [
+    0,
+    1,
+    2,
+    3,
+    4
+  ],
+  "adam_epochs": 5000,
+  "lbfgs_iters": 500,
+  "n_colloc": 5000,
+  "smib_nd": [
+    10,
+    50,
+    100,
+    500,
+    1000
+  ],
+  "smib_horizons": [
+    2.0,
+    5.0,
+    10.0,
+    20.0
+  ],
+  "nb_nd": [
+    200
+  ],
+  "nb_adam_epochs": 5000,
+  "nb_lbfgs_iters": 500
+}
+Network: 5 hidden layers x 50 neurons, tanh, lr=0.001
+Loss weights: w_d=1.0, w_r=1.0 (9-bus residual additionally scaled by 1e-4)
+SMIB: {'m': 0.4, 'd': 0.15, 'B': 0.2, 'P_min': 0.08, 'P_max': 0.18, 'delta0': 0.0, 'omega0': 0.0}
+9-bus: {'T': 2.0, 'tc_min': 0.05, 'tc_max': 0.25, 'fault_bus': 7, 'trip_line': (5, 7)}
+Reference solver: Radau IIA, rtol=atol=1e-10
+Solver timing: Radau IIA, rtol=atol=1e-06
+
+9-bus initial rotor angles (deg): [2.27, 19.73, 13.17]
+9-bus internal EMFs (p.u.): [1.0566, 1.0502, 1.017], Pm (p.u.): [0.7164, 1.63, 0.85]
+9-bus reference critical clearing time (bisection): 0.1620 s

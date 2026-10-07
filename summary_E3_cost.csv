@@ -1,0 +1,5 @@
+system,method,datagen_s,train_s,solver_ms_per_traj,nn_ms_per_traj,speedup_per_query,break_even_queries
+SMIB,MLP,0.61,16.5,24.34,0.078,313,705
+SMIB,PINN,0.58,65.0,26.80,0.071,379,2455
+9-bus,MLP,2.23,16.1,103.30,0.077,1343,177
+9-bus,PINN,2.23,135.8,103.30,0.054,1899,1337
